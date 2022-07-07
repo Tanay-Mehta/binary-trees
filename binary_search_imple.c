@@ -7,14 +7,15 @@ typedef struct node{
     struct node* right;
 }node;
 
-void Newnode(int data){
-    node *newnode = malloc(sizeof(Node));
+node* Newnode(int data){
+    node *newnode = malloc(sizeof(node));
     newnode->left = NULL;
     newnode->right = NULL;
     newnode->data = data;
+    return newnode;
 }
 
-void main(void){
+void main(){
     node *root = Newnode(5);
     root->left = Newnode(3);
     root->right = Newnode(8);
